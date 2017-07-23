@@ -2,9 +2,7 @@ import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 
-
-let apiUrl = 'http://www.vowelsoft.in/myNearest/';
-//let apiUrl = 'http://localhost/myNearest/';
+let apiUrl = 'http://localhost/myNearest/';
 
 @Injectable()
 export class ServicesProvider {
