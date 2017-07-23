@@ -24,11 +24,11 @@ For any reference of ionc please follow the official
 <code>$ ionic cordova plugin add cordova-plugin-*plugin_name*</code>
 <p>*Replace plugin name with plugin name which you want to add.</p>
 <p>E.g</p> 
-<code>$ ionic cordova plugin add cordova-plugin-geolocation</code>
+<code>$ ionic cordova plugin add cordova-plugin-geolocation</code><br/>
 <code>$ npm install --save @ionic-native/geolocation</code>
 
-<p>To remove a plugin:</p>
-<code>$ ionic cordova plugin rm *plugin_name*</code>
+<p>To remove a plugin:</p><br/>
+<code>$ ionic cordova plugin rm *plugin_name*</code><br/>
 <p>E.g</p>
 <code>$ ionic cordova plugin rm cordova-plugin-geolocation</code>
 
