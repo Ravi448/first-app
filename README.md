@@ -1,26 +1,33 @@
-This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
+<p>This is a basic ionic app using basic ionic components to create the template</p>
 
-## How to use this template
+<b>To create a new project open the terminal and type:</b>
+    
+<code>$ npm install -g ionic cordova</code>
+    
+After installing cordova create your very first ionic app project:
 
-*This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/ionic-team/ionic2-app-base).
+<code>$ ionic start first-app</code>
+<p><strong>*Replace first app with the name of your project. First-app in my case.</strong></p>
 
-To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository into the [Starter App Base](https://github.com/ionic-team/ionic2-app-base).
+</b>To start the project</b>
+$ cd first-app
+$ionic serve
+  
+<b>To add a platform: </b>
+<code>$ ionic cordova platform add *platform-name*</code>
+<p>*Replace platform name with either android or ios.</p>
 
-### With the Ionic CLI:
+For any reference of ionc please follow the official 
+ <a href="https://ionicframework.com/docs/" target="_blank"> Ionic documents</a>
+<p>There are many plugin are used in this project. To add a plugin to your project please follow the command :</p>
 
-Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
+<code>$ ionic cordova plugin add cordova-plugin-*plugin_name*</code>
+<p>*Replace plugin name with plugin name which you want to add.</p>
+E.g <code>$ ionic cordova plugin add cordova-plugin-geolocation</code>
+<code>$ npm install --save @ionic-native/geolocation</code>
 
-```bash
-$ sudo npm install -g ionic cordova
-$ ionic start mySideMenu sidemenu
-```
-
-Then, to run it, cd into `mySideMenu` and run:
-
-```bash
-$ ionic cordova platform add ios
-$ ionic cordova run ios
-```
-
-Substitute ios for android if not on a Mac.
+To remove a plugin:
+<code>$ ionic cordova plugin rm *plugin_name*</code>
+E.g
+<code>$ ionic cordova plugin rm cordova-plugin-geolocation</code>
 
