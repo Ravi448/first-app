@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "706527221778",
+    "firebase_url": "https://mynearest-7fa0a.firebaseio.com",
+    "project_id": "mynearest-7fa0a",
+    "storage_bucket": "mynearest-7fa0a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:706527221778:android:f0ab9598711d56aa",
+        "android_client_info": {
+          "package_name": "com.vowel.nearMeravi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "706527221778-isb2vvjvph5p0322u778h4ica7nnv4pu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbpCVjjdfwFYtsRpFfZROYvkGEgvWQuks"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

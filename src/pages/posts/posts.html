@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>myNearest</ion-title>
+    <ion-buttons (click)="listUsers()" end>
+      <button ion-button icon-only>
+        <ion-icon name="person"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list *ngFor="let list of items">
+    <ion-card>
+      <ion-card-header>
+        {{list.user_name}}
+        <ion-note text-right end>
+          <ion-icon name="time"></ion-icon> {{list.created_at}}
+        </ion-note>
+      </ion-card-header>
+      <img src={{list.media_url}}/>
+      <ion-card-content>
+        <ion-card-title>
+          {{list.title}}
+        </ion-card-title>
+        <p>
+          {{list.about}}
+        </p>
+      </ion-card-content>
+      <ion-row>
+        <ion-col>
+          <button ion-button icon-left clear small>
+            <ion-icon name="thumbs-up"></ion-icon>
+            <div>12 Likes</div>
+          </button>
+        </ion-col>
+        <ion-col>
+          <button ion-button icon-left clear small>
+            <ion-icon name="text"></ion-icon>
+            <div>4 Comments</div>
+          </button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col center text-center>
+          
+          <ion-note><br/>
+            <ion-icon name="map"></ion-icon> {{list.place}}
+          </ion-note>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </ion-list>
+</ion-content>

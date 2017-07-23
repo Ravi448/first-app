@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+  <ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="profile">
+      <ion-segment-button value="myData">
+        My Profile
+      </ion-segment-button>
+      <ion-segment-button value="setting">
+        Settings
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+  <div [ngSwitch]="profile">
+  <ion-list *ngSwitchCase="'myData'">
+    <form (ngSubmit)="updateProfile(f.value)" #f="ngForm" >
+      <ion-item>
+        <ion-label floating>First Name</ion-label>
+        <ion-input type="text" name="first_name" ngModel={{details.first_name}} required ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Last Name</ion-label>
+        <ion-input type="text" name="last_name" ngModel={{details.last_name}} ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Email</ion-label>
+        <ion-input type="email" name="email" ngModel={{details.email}} required ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Phone</ion-label>
+        <ion-input type="number" name="phone" ngModel={{details.phone}} required ></ion-input>
+      </ion-item>
+      <button ion-button full primary [disabled]="!f.valid">Update</button>
+    </form>
+  </ion-list>
+  <ion-list *ngSwitchCase="'setting'">
+    <form (ngSubmit)="changePass(f.value)" #f="ngForm" >
+      <ion-item>
+        <ion-label floating>Old Password</ion-label>
+        <ion-input type="password" value={{details.password}} [readonly]="isReadonly" ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>New Password</ion-label>
+        <ion-input type="password" name="password" ngModel required ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Confirm Password</ion-label>
+        <ion-input type="password" name="cpassword" ngModel required ></ion-input>
+      </ion-item>
+      <button ion-button full primary [disabled]="!f.valid">Change</button>
+    </form>
+  </ion-list>
+  </div>
+</ion-content>

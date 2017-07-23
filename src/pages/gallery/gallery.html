@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>My Memories</ion-title>
+    <ion-buttons (click)="newPic()" end>
+      <button ion-button color="primary" outline>
+        <ion-icon name="add"> Add New</ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngFor="let list of items">
+    <ion-card>
+      <img src={{list.media_url}}/>
+      <ion-card-content>
+        <ion-card-title>
+          {{list.title}}
+        </ion-card-title>
+        <p>
+          {{list.about}}
+        </p>
+      </ion-card-content>
+      <ion-row>
+        <ion-col>
+          <button ion-button icon-left clear small>
+            <ion-icon name="thumbs-up"></ion-icon>
+            <div>12 Likes</div>
+          </button>
+        </ion-col>
+        <ion-col>
+          <button ion-button icon-left clear small>
+            <ion-icon name="text"></ion-icon>
+            <div>4 Comments</div>
+          </button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col center text-center>
+          <ion-note>
+            {{list.created_at}}
+          </ion-note>
+          <ion-note><br/>
+            {{list.place}}
+          </ion-note>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </ion-list>
+</ion-content>

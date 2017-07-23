@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>List</ion-title>
+    <ion-buttons (click)="wayToMap()" end>
+      <button ion-button icon-only>
+        <ion-icon name="pin"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-buttons (click)="getDirection()" end>
+      <button ion-button icon-only>
+        <ion-icon name="code-working"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="Pull to refresh"
+      refreshingSpinner="circles"
+      refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
+  <ion-searchbar [(ngModel)]="searchTerm" [formControl]="searchControl" (ionInput)="onSearchInput()"></ion-searchbar>
+  <div *ngIf="searching" class="spinner-container">
+        <ion-spinner></ion-spinner>
+    </div>
+  <ion-list *ngFor = "let list of items">
+    <ion-card>
+      <ion-item>
+        <ion-avatar item-start>
+          <img src='11.jpg'>
+        </ion-avatar>
+          {{list.first_name}} {{list.last_name}}
+          <p>{{list.created}}</p>
+      </ion-item>
+    </ion-card>
+  </ion-list>
+</ion-content>

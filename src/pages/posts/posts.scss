@@ -1,0 +1,12 @@
+page-posts {
+    .card-header-md, .card-header-ios{
+        font-size: 1.6rem;
+        color: #f5f4f4;
+        padding: 16px;
+        background: darkgray;
+        font-weight: 500;
+    }
+    .card .note-md, .card .note-ios{
+        float: right;
+    }
+}

@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>My Chats</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+    <ion-list no-lines>
+      <ion-item *ngFor="let message of messagesList">
+       <h3>{{message.name}}</h3> 
+       <p>{{message.message}}</p> 
+      </ion-item>
+    </ion-list>
+</ion-content>
+<ion-footer>
+  <ion-item>
+    <ion-input type="text" placeholder="type here..." [(ngModel)]="newmessage"></ion-input>
+    <button ion-button clear item-right (click)="send()">Send</button>
+  </ion-item>
+</ion-footer>
