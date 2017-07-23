@@ -41,12 +41,12 @@ export class MyApp {
       
       ) {
         var config = {
-          apiKey: "AIzaSyDvqN736EjAhoV2BopibRNpb8WuL15KrmQ",
-          authDomain: "mynearest-7fa0a.firebaseapp.com",
-          databaseURL: "https://mynearest-7fa0a.firebaseio.com",
-          projectId: "mynearest-7fa0a",
-          storageBucket: "mynearest-7fa0a.appspot.com",
-          messagingSenderId: "706527221778"
+          apiKey: YOUR_API_KEY,
+          authDomain: AUTH_DOMAIN_BY_GOOGLE_FCM,
+          databaseURL: DATABASE_URL_BY_FCM,
+          projectId: FCM_ID,
+          storageBucket: STORAGE_BUCKET,
+          messagingSenderId: SENDER_ID
         };
   firebase.initializeApp(config);
     //this.initializeApp();
